@@ -1,5 +1,5 @@
 import { useLoaderData } from "remix";
-import type { LoaderFunction } from "remix";
+import type { LoaderFunction, MetaFunction } from "remix";
 
 interface Pokemon {
   id: number;
@@ -7,6 +7,10 @@ interface Pokemon {
   sprites: {
     front_default: string
   }
+}
+
+export let meta: MetaFunction = ({ params }) => {
+  return {title: `${params.pokemon} | Pokemon list`}
 }
 
 export let loader: LoaderFunction = ({ params }) => {

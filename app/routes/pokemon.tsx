@@ -1,9 +1,13 @@
 import { Link, Outlet, useLoaderData } from "remix";
-import type { LoaderFunction } from "remix";
+import type { LoaderFunction, MetaFunction } from "remix";
 
 interface Pokemon {
   name: string;
   url: string;
+}
+
+export let meta: MetaFunction = () => {
+  return {title: 'Pokemon list'}
 }
 
 export let loader: LoaderFunction = () => {
