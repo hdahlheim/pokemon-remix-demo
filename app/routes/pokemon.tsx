@@ -13,7 +13,7 @@ export let meta: MetaFunction = () => {
 export let loader: LoaderFunction = () => {
   // you can point to whatever org you want, ofc
   return fetch(
-    "https://pokeapi.co/api/v2/pokemon?limit=150"
+    "https://pokeapi.co/api/v2/pokemon?limit=151"
   ).then(res => res.json()).then(res => res.results);
 };
 
