@@ -17,7 +17,7 @@ export let loader: LoaderFunction = () => {
   ).then(res => res.json()).then(res => res.results);
 };
 
-export default function Team() {
+export default function PokemonLayoutPage() {
   let data = useLoaderData<Pokemon[]>();
 
   return (
